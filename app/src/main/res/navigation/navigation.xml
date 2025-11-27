@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.todoapp.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_displayTaskFragment"
+            app:destination="@id/displayTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayTaskFragment"
+        android:name="com.example.todoapp.DisplayTaskFragment"
+        android:label="fragment_display_task"
+        tools:layout="@layout/fragment_display_task" >
+        <action
+            android:id="@+id/action_displayTaskFragment_to_insertTaskFragment"
+            app:destination="@id/insertTaskFragment" />
+        <action
+            android:id="@+id/action_displayTaskFragment_to_updateTaskFragment"
+            app:destination="@id/updateTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insertTaskFragment"
+        android:name="com.example.todoapp.InsertTaskFragment"
+        android:label="fragment_insert_task"
+        tools:layout="@layout/fragment_insert_task" >
+        <action
+            android:id="@+id/action_insertTaskFragment_to_displayTaskFragment"
+            app:destination="@id/displayTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTaskFragment"
+        android:name="com.example.todoapp.UpdateTaskFragment"
+        android:label="fragment_update_task"
+        tools:layout="@layout/fragment_update_task" >
+        <action
+            android:id="@+id/action_updateTaskFragment_to_displayTaskFragment"
+            app:destination="@id/displayTaskFragment" />
+    </fragment>
+</navigation>
